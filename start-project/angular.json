@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "projeto": {
+    "start-project": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/projeto",
+            "outputPath": "dist/start-project",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -23,8 +23,10 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/admin-lte/bootstrap/css/bootstrap.min.css",
               "./node_modules/admin-lte/dist/css/AdminLTE.min.css",
+              "./node_modules/admin-lte/dist/css/skins/skin-red.min.css",
+              "./node_modules/admin-lte/plugins/iCheck/flat/red.css",
               "src/styles.css"
             ],
             "scripts": [],
@@ -60,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "projeto:build"
+            "browserTarget": "start-project:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "projeto:build:production"
+              "browserTarget": "start-project:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "projeto:build"
+            "browserTarget": "start-project:build"
           }
         },
         "test": {
@@ -105,7 +107,7 @@
         }
       }
     },
-    "projeto-e2e": {
+    "start-project-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -114,11 +116,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "projeto:serve"
+            "devServerTarget": "start-project:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "projeto:serve:production"
+              "devServerTarget": "start-project:serve:production"
             }
           }
         },
@@ -134,5 +136,5 @@
       }
     }
   },
-  "defaultProject": "projeto"
+  "defaultProject": "start-project"
 }

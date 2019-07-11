@@ -4,10 +4,6 @@ body {
   color: #555;
 }
 
-.main-header{
-  background: #e04444;
-}
-
 .box-header {
   color: inherit;
 }
@@ -22,9 +18,9 @@ body {
   min-height: 120px;
   background: #fff;
   width: 100%;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   border-radius: 2px;
-  margin-bottom: 45px;
+  margin-bottom: 15px;
 }
 .place-info-box small {
   font-size: 14px;
@@ -264,27 +260,4 @@ body {
 
 .has-error-block {
   color: #dd4b39;
-}
-
-/* Barra de busca de restaurantes */
-
-.search-link {
-    cursor: pointer;
-    color: #555;
-}
-
-.search-link:hover {
-  color: #dd4b39;
-}
-
-.search-bar {
-    opacity: 0;
-    max-height: 0px;
-}
-
-
-/******************RESET***********************/
-
-.main-header .navbar, .content-wrapper, .main-footer{
-  margin-left: 0;
 }
