@@ -9,6 +9,8 @@ import { AboutComponent } from './about/about.component';
 import { AppRoutingModule } from './app.routing.module';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { RestaurantDetailComponent } from './restaurant-detail/restaurant-detail.component';
+import { ReviewsComponent } from './restaurant-detail/reviews/reviews.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { NotfoundComponent } from './notfound/notfound.component';
     HomeComponent,
     AboutComponent,
     RestaurantsComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    RestaurantDetailComponent,
+    ReviewsComponent
   ],
   imports: [
     BrowserModule,
