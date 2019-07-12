@@ -11,6 +11,9 @@ import { RestaurantsComponent } from './restaurants/restaurants.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { TesteComponent } from './teste/teste.component';
 import { RestaurantComponent } from './restaurants/restaurant/restaurant.component';
+import { ReviewsComponent } from './restaurant-detail/reviews/reviews.component';
+import { HttpClientModule } from '@angular/common/http';
+import { RestaurantDetailComponent } from './restaurant-detail/restaurant-detail.component';
 
 @NgModule({
   declarations: [
@@ -22,11 +25,14 @@ import { RestaurantComponent } from './restaurants/restaurant/restaurant.compone
     RestaurantsComponent,
     NotfoundComponent,
     TesteComponent,
-    RestaurantComponent
+    RestaurantComponent,
+    ReviewsComponent,
+    RestaurantDetailComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
