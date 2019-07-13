@@ -14,7 +14,7 @@ export class RestaurantsComponent implements OnInit {
 
     this.negocioRestaurant.listaRestaurants().subscribe( result => {
       this.listRestaurants = result;
-
+      
       console.log(result);
     });
 
