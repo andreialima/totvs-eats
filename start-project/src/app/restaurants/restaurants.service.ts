@@ -1,6 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Restaurant } from './restaurant/restaurant.model';
+import { Observable } from 'rxjs';
 
 const API = 'http://localhost:3000';
 
@@ -13,4 +14,10 @@ export class RestaurantsService {
         return this.http
             .get<Restaurant[]>(API + '/restaurants');       
     }
+
+    restaurantById(id: string) {
+        return this.http
+            .get<Restaurant>(`${API}/restaurants/${id}`);    
+    }
+
 }

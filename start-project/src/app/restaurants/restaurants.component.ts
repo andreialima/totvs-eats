@@ -18,18 +18,10 @@ export class RestaurantsComponent implements OnInit {
       console.log(result);
     });
 
-    this.teste();
-    this.teste();
-    this.teste();
-    this.teste();
-
   }
 
   ngOnInit() {
   }
 
-  teste(){
-    console.log('teste');
-  }
 
 }

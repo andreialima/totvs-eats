@@ -1,15 +1,27 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router'
+
+import { RestaurantsService } from '../restaurants/restaurants.service'
+
+import { Restaurant } from '../restaurants/restaurant/restaurant.model'
 
 @Component({
-  selector: 'app-restaurant-detail',
-  templateUrl: './restaurant-detail.component.html',
-  styleUrls: ['./restaurant-detail.component.css']
+  selector: 'mt-restaurant-detail',
+  templateUrl: './restaurant-detail.component.html'
 })
 export class RestaurantDetailComponent implements OnInit {
 
-  constructor() { }
+  restaurant: Restaurant;
+
+  constructor(private restaurantsService: RestaurantsService,
+              private route: ActivatedRoute) { }
 
   ngOnInit() {
+    
+    let id = this.route.snapshot.params['id'];
+
+    this.restaurantsService.restaurantById(id)
+      .subscribe(result => this.restaurant = result);
   }
 
 }
